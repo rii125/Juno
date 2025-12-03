@@ -4,5 +4,4 @@
 </div>
 <hr/>
 
-![Version](https://img.shields.io/badge/version-Alpha_0.0.0-red?logo=./Juno.png)
-![](https://img.shields.io/badge/version-Alpha_0.0.0-green)
+![Version](https://img.shields.io/badge/version-Alpha_0.0.0-red)
