@@ -1,0 +1,6 @@
+public static main() {
+    var a: int = 100;
+    var b: string = "Hello Juno";
+    var c: bool = true;
+    print(b);
+}
