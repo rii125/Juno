@@ -26,6 +26,6 @@ A concise introduction: “Juno is a new programming language designed with simp
 - Clear error handling and hints
 
 # Installation
-```bash
+```cmd
 git clone https://github.com/rii125/Juno.git
 ```
