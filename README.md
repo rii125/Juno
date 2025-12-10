@@ -36,3 +36,7 @@ cd Juno
 - Any type introduction
 - Error handling system
 - Logo design finalization
+
+# Contributing
+- Pull requests welcome
+- Issues for bug reports and feature requests
