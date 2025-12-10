@@ -16,4 +16,16 @@ public static main() {
 }
 ```
 
-## 
+# What is Juno?
+A concise introduction: “Juno is a new programming language designed with simplicity, type safety, and syntax beauty in mind.”
+
+# Features
+- Syntax inspired by Java (object-oriented clarity)
+- Type safety influenced by TypeScript 
+- AST/IR design for extensibility 
+- Clear error handling and hints
+
+# Installation
+```bash
+git clone https://github.com/rii125/Juno.git
+```
