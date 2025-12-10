@@ -30,3 +30,9 @@ A concise introduction: “Juno is a new programming language designed with simp
 git clone https://github.com/rii125/Juno.git
 cd Juno
 ```
+
+# Roadmap
+- Variable and array specification
+- Any type introduction
+- Error handling system
+- Logo design finalization
