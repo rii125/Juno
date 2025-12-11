@@ -6,6 +6,8 @@
 
 ![Version](https://img.shields.io/badge/version-Alpha_0.0.0-red)
 ![Version](https://img.shields.io/badge/AST_version-0.0.0-blue)
+![Discord](https://img.shields.io/discord/1448228265805484085?logo=discord&label=Check%20community&cacheSeconds=aaa&link=https%3A%2F%2Fdiscord.com%2Fchannels%2F1448228265805484085%2F)
+
 
 **Juno is a new language like Java.** Java is an object-oriented language, and Juno is influenced by it.
 It also excels in type maintenance, drawing inspiration from the approach to writing type annotations seen in TypeScript.
