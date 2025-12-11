@@ -32,7 +32,6 @@ You can easily get started using the git command.
 Type `git clone`, enter the [GitHub URL](https://github.com/rii125/Juno), and run it in your own environment.
 ```bash
 git clone https://github.com/rii125/Juno.git
-cd Juno
 ```
 
 # Roadmap
