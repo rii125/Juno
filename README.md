@@ -6,8 +6,9 @@
 
 ![Version](https://img.shields.io/badge/version-Alpha_0.0.0-red)
 ![Version](https://img.shields.io/badge/AST_version-0.0.0-blue)
-![Discord](https://img.shields.io/discord/1448228265805484085?logo=discord&label=Juno%20community&cacheSeconds=aaa&link=https%3A%2F%2Fdiscord.com%2Fchannels%2F1448228265805484085%2F)
+![Discord](https://img.shields.io/discord/1448228265805484085?logo=discord&label=Juno%20community)
 
+Let's join the [discord server](https://discord.gg/DYazg7WU98)
 
 **Juno is a new language like Java.** Java is an object-oriented language, and Juno is influenced by it.
 It also excels in type maintenance, drawing inspiration from the approach to writing type annotations seen in TypeScript.
@@ -31,15 +32,15 @@ A concise introduction: “Juno is a new programming language designed with simp
 You can easily get started using the git command.
 Type `git clone`, enter the [GitHub URL](https://github.com/rii125/Juno), and run it in your own environment.
 ```bash
-git clone https://github.com/rii125/Juno.git
+> git clone https://github.com/rii125/Juno.git
 ```
 
 # Roadmap
-- Variable and array specification
-- Any type introduction
-- Error handling system
-- Logo design finalization
+- [ ] Variable and array specification
+- [ ] Any type introduction 
+- [ ] Error handling system
 
 # Contributing
 - Pull requests welcome
 - Issues for bug reports and feature requests
+- You can contribute via Discord
