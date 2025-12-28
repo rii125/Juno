@@ -36,7 +36,7 @@ Type `git clone`, enter the [GitHub URL](https://github.com/rii125/Juno), and ru
 ```
 
 # Roadmap
-Roadmapに関しては、issueにてまとめています。詳しく知りたい方は[こちら](https://github.com/rii125/Juno/issues/1)から。
+For the roadmap, we've compiled it in an issue. For more details, please see [here](https://github.com/rii125/Juno/issues/1).
 
 # Contributing
 - Pull requests welcome
