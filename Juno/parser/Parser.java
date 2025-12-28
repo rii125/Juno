@@ -22,25 +22,47 @@ public class Parser {
 
         List<StatementNode> statements = new ArrayList<>();
         while (!check(TokenType.RBRACE) && !isAtEnd()) {
-            statements.add(parseDeclaration());
+            statements.add(parseStatement());
         }
 
         consume(TokenType.RBRACE, "} が必要です");
         return new MainFunctionNode(new BlockNode(statements));
     }
 
-    private StatementNode parseDeclaration() {
-        if (match(TokenType.VAR)) {
+    private StatementNode parseStatement() {
+        // var / final
+        if (match(TokenType.VAR) || match(TokenType.FINAL)) {
+            boolean isFinal = previous().type == TokenType.FINAL;
+
             Token name = consume(TokenType.IDENTIFIER, "変数名が必要です");
             consume(TokenType.COLON, ": が必要です");
-            Token typeToken = advance();
-            TypeNode type = new TypeNode(typeToken, null);
-            consume(TokenType.EQUAL, "= が必要です");
-            ExpressionNode value = parseExpression(); // ← 修正
+
+            TypeNode type = parseType();
+
+            ExpressionNode value = null;
+            if (match(TokenType.EQUAL)) {
+                value = parseExpression();
+            }
+
             consume(TokenType.SEMICOLON, "; が必要です");
-            return new TypedVarDeclarationNode(type, name, value);
+
+            return new TypedVarDeclarationNode(isFinal, type, name, value);
+        }
+        // assignment: IDENTIFIER "=" expression ";"
+        if (check(TokenType.IDENTIFIER)) {
+            Token name = advance(); // IDENTIFIER を消費
+
+            if (match(TokenType.EQUAL)) {
+                ExpressionNode value = parseExpression();
+                consume(TokenType.SEMICOLON, "; が必要です");
+                return new AssignmentNode(name, value);
+            }
+
+            throw new RuntimeException("代入文が不正です → " + peek());
         }
 
+
+        // print
         if (match(TokenType.PRINT)) {
             consume(TokenType.LPAREN, "( が必要です");
             ExpressionNode expr = parseExpression();
@@ -48,7 +70,8 @@ public class Parser {
             consume(TokenType.SEMICOLON, "; が必要です");
             return new StatementNode.Print(expr);
         }
-        throw new RuntimeException("[構文エラー] 文が不正です → " + peek());
+
+        throw new RuntimeException("未知の文です: " + peek());
     }
 
     private ExpressionNode parseExpression() {
@@ -71,6 +94,20 @@ public class Parser {
         return false;
     }
 
+    private TypeNode parseType() {
+        Token typeToken = consumeType();
+        return new TypeNode(typeToken);
+    }
+
+    private Token consumeType() {
+        if (match(TokenType.TYPE_INT)) return previous();
+        if (match(TokenType.TYPE_STRING)) return previous();
+        if (match(TokenType.TYPE_BOOL)) return previous();
+        if (match(TokenType.TYPE_FLOAT)) return previous();
+        if (match(TokenType.TYPE_ANY)) return previous();
+        throw new RuntimeException("型が必要です");
+    }
+
     private Token consume(TokenType type, String message) {
         if (check(type)) return advance();
         throw new RuntimeException("[構文エラー] " + message + " → " + peek());
@@ -91,7 +128,7 @@ public class Parser {
     }
 
     private Token previous() {
-        return tokens.get(current - 1); // ← 修正
+        return tokens.get(current - 1);
     }
 
     private boolean isAtEnd() {

@@ -1,6 +1,20 @@
 public static main() {
-    var a: int = 100;
-    var b: string = "Hello Juno";
-    var c: bool = true;
-    print(b);
+    var number : int;
+    number = 75878230;
+
+    var floatVar : float;
+    floatVar = 3.1415;
+
+    var booleanVar : bool;
+    booleanVar = true;
+    booleanVar = false;
+
+    var stringVar : string;
+    stringVar = "I'm developing Juno.";
+
+    var anyVar : any;
+    anyVar = 100;
+    anyVar = 3.14;
+    anyVar = true;
+    anyVar = "Juno";
 }

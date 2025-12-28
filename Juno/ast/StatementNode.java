@@ -1,7 +1,7 @@
 package ast;
 
 public class StatementNode extends Node{
-    public enum Kind { VAR_DECL, PRINT,}
+    public enum Kind { VAR_DECL, PRINT, ASSIGNMENT,}
     public final Kind kind;
 
     protected StatementNode(Kind kind) {
