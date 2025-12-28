@@ -36,9 +36,7 @@ Type `git clone`, enter the [GitHub URL](https://github.com/rii125/Juno), and ru
 ```
 
 # Roadmap
-- [ ] Variable and array specification
-- [ ] Any type introduction 
-- [ ] Error handling system
+Roadmapに関しては、issueにてまとめています。詳しく知りたい方は[こちら](https://github.com/rii125/Juno/issues/1)から。
 
 # Contributing
 - Pull requests welcome
