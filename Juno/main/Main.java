@@ -18,12 +18,11 @@ public class Main {
         Lexer lexer = new Lexer();
         List<Token> tokens = lexer.tokenize(source);
 
-//        out.println("2 Connect!");
+        TypeChecker checker = new TypeChecker();
 
         Parser parser = new Parser(tokens);
         MainFunctionNode ast = parser.parse();
-
-//        out.println("3 Connect!");
+        checker.check(ast.block);
 
         printAst(ast, 0);
     }

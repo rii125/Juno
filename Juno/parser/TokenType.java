@@ -7,6 +7,7 @@ public enum TokenType {
     VOID,
     MAIN,
     VAR,
+    FINAL,
     PRINT,
     // Type
     TYPE_INT,

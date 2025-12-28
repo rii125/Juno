@@ -1,10 +1,11 @@
 package ast;
 
-import parser.*;
+import parser.Token;
 
-public class TypeNode extends Node{
+public class TypeNode extends Node {
     public final Token baseType;
-    public TypeNode(Token baseType, String s) {
+
+    public TypeNode(Token baseType) {
         this.baseType = baseType;
     }
 
