@@ -4,8 +4,8 @@
 </div>
 <hr/>
 
-![Version](https://img.shields.io/badge/version-Alpha_1.0.0-red)
-![Version](https://img.shields.io/badge/AST_version-Alpha_1.0.0-blue)
+![Version](https://img.shields.io/badge/version-Alpha_1.1.0-red)
+![Version](https://img.shields.io/badge/AST_version-Alpha_1.1.0-blue)
 ![Discord](https://img.shields.io/discord/1448228265805484085?logo=discord&label=Juno%20community)
 
 Let's join the [discord server](https://discord.gg/DYazg7WU98)
