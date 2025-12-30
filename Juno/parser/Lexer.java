@@ -16,6 +16,29 @@ public class Lexer {
                 continue;
             }
 
+            // コメント
+            if (c == '/') {
+                // 行コメント //
+                if (i + 1 < source.length() && source.charAt(i + 1) == '/') {
+                    i += 2;
+                    while (i < source.length() && source.charAt(i) != '\n') {
+                        i++;
+                    }
+                    continue;
+                }
+
+                // ブロックコメント /* ... */
+                if (i + 1 < source.length() && source.charAt(i + 1) == '*') {
+                    i += 2;
+                    while (i < source.length() - 1 &&
+                            !(source.charAt(i) == '*' && source.charAt(i + 1) == '/')) {
+                        i++;
+                    }
+                    i += 2; // "*/" を飛ばす
+                    continue;
+                }
+            }
+
             // ★★★ 数字（int / float）処理はここだけに統合 ★★★
             if (Character.isDigit(c)) {
                 StringBuilder num = new StringBuilder();
@@ -63,6 +86,8 @@ public class Lexer {
                 case ')' -> { tokens.add(new Token(TokenType.RPAREN, ")")); i++; continue; }
                 case '{' -> { tokens.add(new Token(TokenType.LBRACE, "{")); i++; continue; }
                 case '}' -> { tokens.add(new Token(TokenType.RBRACE, "}")); i++; continue; }
+                case '*' -> { tokens.add(new Token(TokenType.SLASH, "*")); i++; continue; }
+                case '/' -> { tokens.add(new Token(TokenType.SLASH, "/")); i++; continue; }
             }
 
             // ★ キーワード / 識別子

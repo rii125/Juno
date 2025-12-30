@@ -29,8 +29,11 @@ public enum TokenType {
     RPAREN, // )
     RBRACE, // {
     LBRACE, // }
+    STAR, // *
+    SLASH, // /
     LT, // <
     RT, // >
+
     // Identifier,termination
     IDENTIFIER,
     EOF,

@@ -1,4 +1,15 @@
 public static main() {
+    /*
+    * int
+    * float
+    * bool
+    * string
+    * any
+    * list
+    * object (追加予定)
+    */
+
+    // 宣言のみの変数
     var number : int;
     number = 75878230;
 
